@@ -574,7 +574,7 @@ wal -i /ruta/a/wallpaper.jpg
 
 ---
 
-## Informacion de版本
+## Informacion extra
 
 - NixVim v1.0
 - Neovim 0.12+
