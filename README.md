@@ -1,4 +1,4 @@
-# NixVim - Neovim IDE para NixOS
+# NixVim - Neovim IDE 
 
 Entorno de desarrollo completo basado en Neovim con soporte multi-lenguaje,
 autocompletado inteligente, depurador, terminal, git, Arduino con tienda de
