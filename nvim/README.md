@@ -16,12 +16,14 @@ librerias, fondo transparente con integracion pywal, y dashboard personalizado.
 ## Instalacion
 
 ```bash
-# 1. Los archivos ya estan en ~/.config/nvim/
-# 2. Ejecuta nvim - lazy.nvim descargara los 43 plugins automaticamente
+# Clonar el repositorio
+git clone https://github.com/Nix-rosa/nixvim.git ~/.config/nvim
+
+# Ejecuta nvim - lazy.nvim descargara los 43 plugins automaticamente
 nvim
 
-# 3. Instala las herramientas del sistema (requiere sudo)
-#    Copia el contenido de NIXOS_PACKAGES.nix a configuration.nix
+# Instala las herramientas del sistema (requiere sudo)
+# Copia el contenido de NIXOS_PACKAGES.nix a configuration.nix
 sudo nixos-rebuild switch
 ```
 
@@ -76,42 +78,43 @@ nvim
 ## Estructura del proyecto
 
 ```
-~/.config/nvim/
-├── init.lua                         # Entry point
-├── ftplugin/
-│   └── arduino.lua                  # Config Arduino filetype
-├── lua/
-│   ├── arduino/
-│   │   └── init.lua                 # Modulo Arduino completo
-│   ├── core/
-│   │   ├── options.lua              # Opciones de Neovim
-│   │   ├── keymaps.lua              # Atajos globales + LSP
-│   │   ├── autocmds.lua             # Autocomandos
-│   │   ├── utils.lua                # Utilidades
-│   │   └── lazy.lua                 # Bootstrap lazy.nvim
-│   ├── plugins/
-│   │   ├── colorscheme.lua          # bamboo.nvim + pywal
-│   │   ├── lsp.lua                  # Mason + 8 LSP servers
-│   │   ├── completion.lua           # blink.cmp v2
-│   │   ├── treesitter.lua           # Syntax highlighting
-│   │   ├── formatting.lua           # conform.nvim
-│   │   ├── linting.lua              # nvim-lint
-│   │   ├── testing.lua              # neotest
-│   │   ├── git.lua                  # gitsigns + fugitive + diffview
-│   │   ├── debugging.lua            # nvim-dap + dap-ui
-│   │   ├── fzf.lua                  # FzfLua (finder principal)
-│   │   ├── telescope.lua            # Telescope (finder secundario)
-│   │   ├── neotree.lua              # Explorador de archivos
-│   │   ├── terminal.lua             # toggleterm
-│   │   ├── lualine.lua              # Statusline
-│   │   ├── extras.lua               # which-key, indent, autopairs, etc
-│   │   └── notify.lua               # Notificaciones
-│   └── ui/
-│       ├── dashboard.lua            # Dashboard personalizado
-│       └── pywal.lua                # Integracion pywal
-├── lazy-lock.json                   # Lockfile de plugins
-├── NIXOS_PACKAGES.nix               # Paquetes para configuration.nix
-└── README.md                        # Este archivo
+nixvim/
+└── nvim/
+    ├── init.lua                         # Entry point
+    ├── ftplugin/
+    │   └── arduino.lua                  # Config Arduino filetype
+    ├── lua/
+    │   ├── arduino/
+    │   │   └── init.lua                 # Modulo Arduino completo
+    │   ├── core/
+    │   │   ├── options.lua              # Opciones de Neovim
+    │   │   ├── keymaps.lua              # Atajos globales + LSP
+    │   │   ├── autocmds.lua             # Autocomandos
+    │   │   ├── utils.lua                # Utilidades
+    │   │   └── lazy.lua                 # Bootstrap lazy.nvim
+    │   ├── plugins/
+    │   │   ├── colorscheme.lua          # bamboo.nvim + pywal
+    │   │   ├── lsp.lua                  # Mason + 8 LSP servers
+    │   │   ├── completion.lua           # blink.cmp v2
+    │   │   ├── treesitter.lua           # Syntax highlighting
+    │   │   ├── formatting.lua           # conform.nvim
+    │   │   ├── linting.lua              # nvim-lint
+    │   │   ├── testing.lua              # neotest
+    │   │   ├── git.lua                  # gitsigns + fugitive + diffview
+    │   │   ├── debugging.lua            # nvim-dap + dap-ui
+    │   │   ├── fzf.lua                  # FzfLua (finder principal)
+    │   │   ├── telescope.lua            # Telescope (finder secundario)
+    │   │   ├── neotree.lua              # Explorador de archivos
+    │   │   ├── terminal.lua             # toggleterm
+    │   │   ├── lualine.lua              # Statusline
+    │   │   ├── extras.lua               # which-key, indent, autopairs, etc
+    │   │   └── notify.lua               # Notificaciones
+    │   └── ui/
+    │       ├── dashboard.lua            # Dashboard personalizado
+    │       └── pywal.lua                # Integracion pywal
+    ├── lazy-lock.json                   # Lockfile de plugins
+    ├── NIXOS_PACKAGES.nix               # Paquetes para configuration.nix
+    └── README.md                        # Este archivo
 ```
 
 ---
